@@ -1,0 +1,421 @@
+html {
+    font-family: "Microsoft YaHei", "微软雅黑", "STXihei", "华文细黑";
+    font-size: 10px;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-size: 0;
+    background: #16181C;
+    overflow-x: hidden;
+}
+* {
+    box-sizing: border-box;
+}
+header, footer {
+    width: 100%;
+    height: 60px;
+    background: rgba(203, 27, 69, 0.98);
+}
+header {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #fff;
+    border-bottom: #B22323 4px solid;
+}
+header img {
+    width: 40px;
+    display: inline-block;
+    margin: 10px 10px 10px 100px;
+    vertical-align: middle;
+}
+header span {
+    vertical-align: middle;
+}
+main {
+    width: 100%;
+    height: 80%;
+    height: 600px;
+    position: relative;
+}
+footer {
+    position: fixed;
+    bottom: 0px;
+}
+/* 页面大体布局完成 */
+/* 下面的是各个元素的布局 */
+#top-playing {
+    display: inline-block;
+    width: 500px;
+    height: 60px;
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    color: #999;
+    font-size: 2rem;
+    line-height: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-shadow: 7px 3px 5px #232769;
+}
+.to-page {
+    width: 40px;
+    height: 80px;
+    background: #555;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    /* 鼠标移上去变成小手 */
+    cursor: pointer;
+    /* 点击后会消失，需要 2s */
+    transition: all 1s;
+    z-index: 100;
+}
+.to-page:hover {
+    background: #888;
+}
+.to-page img {
+    width: 30px;
+}
+#pre-page {
+    left: 0;
+    opacity: 0.5;
+}
+#next-page {
+    right: 0;
+    opacity: 0.5;
+}
+.main-page {
+    /*outline: 1px red solid;*/
+    width: 900px;
+    height: 100%;
+    margin: 0px auto;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    transition: all 1s;
+    transform: translateX(-50%);
+}
+#page-0 {
+    /*outline: 2px blue dotted;*/
+    width: 1100px;
+    left: 50%;
+    height: 1200px;
+}
+#page-1 {
+    /*outline: 2px yellow dotted;*/
+    right: -500%;
+}
+#page-1 .aside {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.lpbo {
+    /*outline: 2px blue dotted;*/
+    margin: 0px auto;
+    width: 80%;
+    height: 40%;
+}
+#recommendation {
+    /*outline: 2px yellow dotted;*/
+    height: 55%;
+    width: 90%;
+    margin: 40px auto;
+}
+#recommendation a {
+    text-align: center;
+    display: block;
+    height: 50px;
+    color: black;
+    font-size: 3rem;
+    line-height: 50px;
+    background: rgba(203, 27, 69, 0.9);
+    text-shadow: 5px 3px 5px rgba(22, 24, 28, 0.74);
+}
+#recommendation-list {
+    display: block;
+}
+#recommendation-list .re-music {
+    display: inline-block;
+    width: 245px;
+    height: 270px;
+    overflow: hidden;
+    cursor: pointer;
+}
+#recommendation-list .re-photo {
+    display: block;
+    margin: 20px 20px 0px 20px;
+    width: 200px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+}
+#recommendation-list .re-photo:hover {
+    box-shadow: 0px 0px 10px #777;
+}
+#recommendation-lis .re-name {
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    color: #aaa;
+    font-size: 2rem;
+    text-align: center;
+}
+.left-aside {
+    float: left;
+}
+.right-aside {
+    float: right;
+    padding: 20px;
+}
+.music-cd {
+    height: 70%;
+    position: relative;
+}
+.cd-outside {
+    width: 330px;
+    height: 330px;
+    background: #999;
+    border-radius: 50%;
+}
+.cd {
+    width: 320px;
+    height: 320px;
+    background-image: url(img/cd.png);
+    border-radius: 50%;
+}
+#gan {
+    position: absolute;
+    z-index: 100;
+    width: 100px;
+    left: 57%;
+    transform: translateX(-50%) rotateZ(-30deg);
+    transform-origin: 10px 15px;
+    top: -19px;
+    transition: all 0.5s;
+}
+#cd-cover {
+    display: inline-block;
+    width: 235px;
+    height: 235px;
+    background-image: url(img/九九八十一.jpg);
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+#cd-cover:hover {
+    width: 220px;
+    height: 220xp;
+}
+.bag {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#music-name {
+    height: 30%;
+    color: #fff;
+    font-size: 3rem;
+    text-align: center;
+}
+.music-function {
+    padding: 30px;
+}
+.music-function span {
+    width: 30px;
+    font-size: 1.5rem;
+    background: #29262C;
+    border-radius: 5px;
+    padding: 5px 15px;
+    margin: 20px 10px;
+    cursor: pointer;
+    color: #aaa;
+}
+.music-function span:hover {
+    background: #333;
+    color: #fff;
+}
+.play-list {
+    height: 5%;
+    text-align: center;
+    font-size: 2rem;
+    color: #aaa;
+    margin: 20px;
+}
+#music-play-list {
+    height: 90%;
+    font-size: 1.6rem;
+    color: #aaa;
+}
+.playing::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-image: url(img/cur.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+.music-info-title {
+    height: 40px;
+    background: #333333;
+}
+.music-info-title span {
+    display: inline-block;
+    line-height: 40px;
+    text-align: center;
+}
+.music-info-title .music-name, .music-info .music-name {
+    width: 58%;
+}
+.music-info-title .music-duration, .music-info .music-duration {
+    width: 8%;
+}
+.music-info-title .music-singer, .music-info .music-singer {
+    width: 28%;
+}
+.music-info {
+    position: relative;
+    height: 30px;
+    opacity: 0.8;
+    cursor: pointer;
+}
+.music-info span {
+    display: inline-block;
+    line-height: 30px;
+    width: 32%;
+    text-align: center;
+}
+.music-info:nth-child(odd) {
+    background: #2a2a2a;
+}
+.music-info:nth-child(even) {
+    background: #222;
+}
+.music-info:hover {
+    background: #888;
+    color: #fff;
+}
+#music-control img {
+    width: 40px;
+    display: inline-block;
+    margin: 10px 20px;
+    cursor: pointer;
+}
+#music-control {
+    display: inline-block;
+    width: 250px;
+    height: 60px;
+    text-align: center;
+    float: left;
+}
+#music-progress {
+    margin: 0px 250px;
+    height: 60px;
+}
+#progress {
+    margin: 0px 50px;
+    height: 60px;
+    position: relative;
+}
+#current-progress {
+    width: 0%;
+    background: #B82525;
+}
+#music-progress-point {
+    left: 0%;
+}
+#current-time, #duration {
+    display: inline-block;
+    width: 50px;
+    height: 60px;
+    color: #fff;
+    line-height: 60px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.music-progress {
+    cursor: default;
+    display: inline-block;
+    width: 100%;
+    background: #fff;
+    height: 5px;
+    border-radius: 2.5px;
+}
+#current-time {
+    float: left;
+}
+#duration {
+    float: right;
+}
+#music-vol-order {
+    float: right;
+    display: inline-block;
+    width: 250px;
+    height: 60px;
+    position: relative;
+}
+#music-vol-order img {
+    cursor: pointer;
+    width: 30px;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+.music-vol {
+    display: inline-block;
+    width: 100px;
+    background: #fff;
+    height: 5px;
+    vertical-align: middle;
+    border-radius: 2.5px;
+    margin-left: 5px;
+}
+#id-music-vol {
+    width: 50px;
+    background: #B82525;
+    height: 6px;
+}
+#id-music-vol-point {
+    left: 150px;
+}
+.point {
+    width: 15px;
+    height: 15px;
+    margin-left: -5.5px;
+    border-radius: 50%;
+    background: #fff;
+    text-align: center;
+    cursor: pointer;
+}
+.point span {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background: #B82525;
+    margin-top: 5px;
+    border-radius: 50%;
+}
+.vetical {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.midXY {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}

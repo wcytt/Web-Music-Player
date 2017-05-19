@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <title>网页音乐播放器</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="lpbo.css">
+  </head>
+  <body>
+      <header>
+          <img src="img/icon.png" alt="">
+          <span>音乐</span>
+          <div id="top-playing">
+              <span>正在播放: </span>
+              <span id="top-playing-name"></span>
+          </div>
+      </header>
+
+      <main id="main" data-page=0>
+          <div id="pre-page" class="prePage to-page">
+              <img class="midXY" src="img/prePage.png" alt="">
+          </div>
+          <div id="next-page" class="nextPage to-page">
+              <img class="midXY" src="img/nextPage.png" alt="">
+          </div>
+          <audio id="audio-player">
+              <source src="music/九九八十一.mp3">
+          </audio>
+          <section id="page-0" class="main-page">
+              <section class="lpbo">
+                  <div id="lpbo">
+                      <span class="photo p1" id="photo-0"><a>1</a></span>
+                      <span class="photo p2" id="photo-1"><a>2</a></span>
+                      <span class="photo p3" id="photo-2"><a>3</a></span>
+                      <span class="photo p4" id="photo-3"><a>4</a></span>
+                      <span class="photo p5" id="photo-4"><a>5</a></span>
+                  </div>
+              </section>
+              <section id="recommendation">
+                  <a>推荐歌曲</a>
+                  <div id="recommendation-list">
+                  </div>
+              </section>
+          </section>
+          <section id="page-1" class="main-page">
+              <section class="left-aside aside">
+                  <img id="gan" src="img/gan.png" alt="">
+                  <div class="music-cd">
+                      <span class="cd-outside midXY">
+                          <span id="rotate-cd" class="cd midXY bag">
+                              <span class="bag midXY" id="cd-cover">
+                              </span>
+                          </span>
+                      </span>
+                  </div>
+                  <div id="music-name">
+                      <span id="current-music">九九八十一 -- 肥皂菌</span>
+                      <div class="music-function">
+                          <span>喜欢</span>
+                          <span>收藏</span>
+                          <span>下载</span>
+                          <span>分享</span>
+                      </div>
+                  </div>
+              </section>
+              <section class="right-aside aside">
+                  <div class="play-list">播放列表</div>
+                  <div id="music-play-list" data-cur=0>
+                      <div class="music-info-title">
+                          <span class="music-name">歌曲</span>
+                          <span class="music-duration">时长</span>
+                          <span class="music-singer">歌手</span>
+                      </div>
+                  </div>
+              </section>
+          </section>
+      </main>
+      <footer>
+          <section id="music-control">
+              <img id="img-pre" src="img/pre2.png" alt="pre">
+              <img id="img-play" src="img/play2.png" alt="play">
+              <img id="img-next" src="img/next2.png" alt="next">
+          </section>
+          <section id="music-vol-order">
+              <img id="music-order" data-order=0 src="img/loop.png" alt="">
+              <img src="img/vol.png" alt="">
+              <span class="music-vol vetical"></span>
+              <span class="music-vol vetical" id="id-music-vol"></span>
+              <span class="vetical point" id="id-music-vol-point">
+                  <span></span>
+              </span>
+          </section>
+          <section id="music-progress">
+              <section id="current-time">
+                  00:00
+              </section>
+              <section id="duration">
+                  04:00
+              </section>
+              <section id="progress">
+                  <span class="music-progress vetical" id="full-progress"></span>
+                  <span class="music-progress vetical" id="current-progress"></span>
+                  <span class="vetical point" id="music-progress-point">
+                      <span></span>
+                  </span>
+              </section>
+          </section>
+      </footer>
+      <script src="gedan.js"></script>
+      <script src="main.js"></script>
+      <script src="play.js"></script>
+      <script src="recommendation.js"></script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+#lpbo {
+    width: 100%;
+    height: 100%;
+    margin: 0px auto;
+    perspective: 300px;
+    perspective-origin: 50% 50%;
+    transform-style: preserve-3d;
+    position: relative;
+}
+#lpbo .photo {
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -150px;
+    margin-left: -150px;
+    transition: all 1.5s;
+    border-radius: 20px;
+    cursor: pointer;
+}
+#lpbo .photo:hover {
+    transform: translateZ(150px);
+    box-shadow: 0px 0px 5px #000;
+}
+#lpbo span {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    filter: brightness(70%);
+    -webkit-filter: brightness(70%);
+}
+#lpbo span:hover {
+    filter: brightness(100%);
+    -webkit-filter: brightness(100%);
+}
+#lpbo span a {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 40px;
+    display: inline-block;
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    font-weight: 800px;
+    background: #444;
+}
